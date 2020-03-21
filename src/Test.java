@@ -15,6 +15,7 @@ public class Test {
         driver.manage().window().maximize();
         driver.get(url);
 
+        //change language
         WebElement drpLanguage = driver.findElement(By.name("language"));
         Select language = new Select(driver.findElement(By.id("searchLanguage")));
         language.selectByValue("pl");
