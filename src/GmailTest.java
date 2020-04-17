@@ -25,19 +25,26 @@ public class GmailTest {
             WebElement user = driver.findElement(By.id("identifierId"));
             user.sendKeys("paulina.test.selenium");
             driver.findElement(By.cssSelector("span[class='RveJvd snByac']")).click();
-            delay();
+            delay(1000);
 
         //insert password
             WebElement password = driver.findElement(By.id("password"));
-            password.sendKeys("psswrd123");
-            //driver.findElement(By.cssSelector("svg[class='stUf5b']")).click();
+            //password.sendKeys("psswrd123");
+            //driver.findElement(By.cssSelector("span[class='wRNPwe pVlEsd']")).click();
+            delay(1000);
+            if( driver.findElement(By.id("password")).isDisplayed()){
 
+                System.out.println("Element is Visible");
+            }
+            else{
+                System.out.println("Element is InVisible");
+        }
     }
 
-    static void delay(){
+    static void delay(int time){
         try
         {
-            Thread.sleep(1000);
+            Thread.sleep(time);
         }
         catch(InterruptedException ex)
         {
